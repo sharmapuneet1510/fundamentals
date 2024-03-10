@@ -19,6 +19,24 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <apache.camel.version>4.4.0</apache.camel.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-main -->
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-main</artifactId>
+                <version>${apache.camel.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-main</artifactId>
+         </dependency>
+    </dependencies>
 </project>
